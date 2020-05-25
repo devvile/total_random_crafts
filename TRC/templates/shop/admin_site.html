@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Admin Panel
+{% endblock %}
+
+{% block content %}
+<h3>Welcome, {{user.username}} </h3>
+<p>
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+</p>
+<h3>Products: </h3>
+<ul>
+    <li>Create Product/ Category</li>
+    <li>All Products</li>
+    <li>Orders History</li>
+</ul>
+
+<h3> Edit Page: </h3>
+<ul>
+    <li>Edit Texts</li>
+    <li>Edit Shop's data</li>
+    <li></li>
+</ul>
+<h3> : </h3>
+<ul>
+    <li>Stats</li>
+    <li></li>
+</ul>
+
+{%endblock %}

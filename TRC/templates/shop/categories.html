@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{category.name}}
+{% endblock %}
+
+{% block content %}
+
+<h2>{{category.name}}:</h2>
+<div class="row">
+    {% for i in category.what_category.all %}
+
+	<div class="col-lg-4">
+			<div class="box-element product">
+<a href ='{%url "detail" i.id%}'> {{i.name}}</a></br>
+<strong>Price: </strong>{{i.price}}</br>
+
+    {{i.short_description}}
+</div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

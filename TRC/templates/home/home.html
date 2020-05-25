@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block title%}
+Total Random Crafts
+{% endblock %}
+{% block content %}
+<div class ='row'>
+    <div class ='col-lg-10'>
+<div class = 'container'>
+    <div class ='jumbotron'>
+    <h3>RANDOM</h3>
+    <h2>{{product.name}}</h2>
+<strong>Price: </strong>{{product.price}}</br>
+        <span id = 'opis_produktu'>{{product.full_description}}</span><br>
+Categories:
+    {% for j in product.category.all %}
+<a href = '{%url "shop_category" j.name %}'>{{j.name}}</a>
+    {% endfor %}
+
+<div class ='col-lg-8'>
+    <div class ='container'>
+
+        <img id ="photo_main" src='{% static "/img/polaroid.jpg" %}'></div>
+</div>
+</div>
+    <hr>
+
+
+{% endblock %}}

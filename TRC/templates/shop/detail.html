@@ -1,0 +1,15 @@
+{%extends 'base.html' %}
+{%block title%}
+{{product.name}}
+{% endblock %}
+{% block content %}
+    <h3> Product detail</h3>
+    <h2>{{product.name}}</h2>
+<strong>Price: </strong>{{product.price}}</br>
+{{product.full_description}}<br>
+Categories:
+    {% for j in product.category.all %}
+<a href = '{%url "shop_category" j.name %}'>{{j.name}}</a>
+    {% endfor %}
+<hr>
+{% endblock %}
