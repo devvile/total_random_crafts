@@ -9,4 +9,5 @@ urlpatterns = [
     path('', home, name='index'),
     path('about',about_us,name='about'),
     path('contact', contact, name='contact'),
+    path('admin_interface/', include('admin_interface.urls'))
 ]

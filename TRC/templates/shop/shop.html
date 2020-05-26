@@ -18,11 +18,15 @@
                 </br>
 <div class = 'container'>
     <a href ='{%url "detail" i.id%}'>
-    <img class= 'thumbnail' src='{% static "/img/slonik.png"%}'>
+    <img class= 'thumbnail' src ='{% static "/img/slonik.png" %}'>
     </a>
 </div>
                 <a href ='{%url "detail" i.id%}'>{{i.name}}</a><br>
-<strong>Price: </strong>{{i.price}}</br>
+<strong>Price: </strong>{{i.price}}
+                {%if i.number == 0%}
+                <span id ='sold'> Sold Out</span>
+                {%endif%}
+                </br>
                 <hr>
 
                 <span id = 'opis_produktu'>{{i.short_description}}<br>

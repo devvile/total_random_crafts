@@ -7,19 +7,20 @@ Admin Panel
 {% block content %}
 <h3>Welcome, {{user.username}} </h3>
 <p>
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
+    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
+    a także zarządzać historią zamówień i stanem producktow w sklepie.
 </p>
 <h3>Products: </h3>
 <ul>
-    <li>Create Product/ Category</li>
-    <li>All Products</li>
-    <li>Orders History</li>
+    <li><a href ='{% url "add_page"%}'>Create Product/ Category</a></li>
+    <li><a href ='{% url "all_products"%}'>All Products</li>
+    <li><a href ='{% url "orders_list_page"%}'>Orders list</li>
 </ul>
 
 <h3> Edit Page: </h3>
 <ul>
-    <li>Edit Texts</li>
+    <li><a href ='{% url "edit_pages"%}'>Edit Page Content</li>
     <li>Edit Shop's data</li>
     <li></li>
 </ul>

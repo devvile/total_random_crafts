@@ -23,11 +23,12 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class = 'container-fluid'>
                         <div class='navbar header'>
-                            <a href="{% url 'index'%}"><img  id="logo" src="{% static 'img/logo2.png' %}"></a>
+
                         </div>
                                                 <a class="navbar-brand" href="{% url 'shop'%}" id = 'nav_el'>Store</a>
   <a class="navbar-brand" href="{% url 'about'%}" id = 'nav_el'>About us</a>
                         <a class="navbar-brand" href="{% url 'contact'%}" id = 'nav_el'>Contact</a>
+                                <a href="{% url 'index'%}"><img  id="logo" src="{% static 'img/logo3.png' %}"></a>
 
 
 
@@ -39,8 +40,7 @@
 
     </ul>
          <div class="form-inline my-2 my-lg-0">
-                    <a href="{% url 'shop_admin'%}"class="btn btn-secondary">Login</a>
-
+             <a href="{% url 'shop_admin'%}"class="btn btn-secondary">Login</a></div>
              <a href=" {% url 'cart' %}"><img  id="cart-icon" src="{% static 'img/cart.png' %}"></a>
              <p id="cart-total">0</p>
 
