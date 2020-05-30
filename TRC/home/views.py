@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from shop.models import Product
 from random import randint
+from admin_interface.models import PageText
 
 def home(request):
     x = Product.objects.all().count()
     rand= randint(1,x)
     product = Product.objects.get(id=rand)
-    kwargs = {'product':product}
+    text1 = PageText.objects.get(name='home')
+    kwargs = {'product':product,'text1':text1}
     return render(request,'home/home.html',kwargs)
 
 def about_us(request):

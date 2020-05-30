@@ -126,13 +126,13 @@ footer {
         }
 
 #logo {
-padding: 20px;
-width:240px;
-height:125px;
+padding: 10px;
+width:500px;
+height:131px;
  display: block;
-  margin-left: 30px;
+  margin-left: 10 px;
   margin-right: auto;
-  width: 50%;
+
 }
 
 #nav_el {
@@ -140,8 +140,8 @@ height:125px;
 		font-family: "Palatino";
 }
 
-#photo_main{    width: 300px;
-height: 300 px;
+#photo_main{    width: 1010px;
+height: 390 px;
 
 }
 a {
@@ -294,6 +294,11 @@ ul ul a {
     padding-left: 30px !important;
     background:  hsl(176, 20%, 50%);
     color: #fff;
+}
+
+#store_nav { height: 35px;
+margin-right: 50px;
+
 }
 
 

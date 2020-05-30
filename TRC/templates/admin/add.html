@@ -6,12 +6,16 @@ ADD
 
 {% block content %}
 
+<p>
+    {{text1}}
+</p>
+
 
 <div class ='container'>
     <div class = 'jumbotron'>
         <h4>Create Product</h4>
         <hr>
-        <form id ='new_product' method="post" action="">
+        <form method ="POST" action = "{% url 'new_product' %}">
       {% csrf_token %}
 
                 <li><strong>Name: </strong> {{form1.name}}</li><hr>
@@ -20,14 +24,14 @@ ADD
                 <li><strong>Bargain Price: </strong>{{form1.bargain_price}}</li><hr>
             <li><strong>Amount: </strong> {{form1.number}}</li><hr>
                 <li><strong>Category: </strong>{{form1.category}}</li><hr>
-            <li><strong>Image: </strong>{{form1.thumbnail}}</li><hr>
+            <li><strong>Image: </strong></li><hr>
             <li><strong>Short Description: </strong></li>
                  {{form1.short_description}}<hr>
               <li><strong>Full Description: </strong></li>
              {{form1.full_description}}<hr>
 
             </ol>
-      <button type = 'submit' name="create_prod" value = 'ok'>Create Product</button>
+      <button type = 'submit' name="create" value = 'ok' >Create Product</button>
 </form>
 
          </div>
