@@ -1,10 +1,37 @@
-{% extends 'base.html' %}
+{% extends 'base_admin2.html' %}
 
 {% block title%}
 ADD
 {% endblock %}
 
 {% block content %}
-<h1>Add</h1>
+
+
+<div class ='container'>
+    <div class = 'jumbotron'>
+        <h4>Create Product</h4>
+        <hr>
+        <form id ='new_product' method="post" action="">
+      {% csrf_token %}
+
+                <li><strong>Name: </strong> {{form1.name}}</li><hr>
+                <li><strong>Price: </strong>{{form1.price}}</li><hr>
+            <li><strong>Discount: </strong> {{form1.discount}}</li><hr>
+                <li><strong>Bargain Price: </strong>{{form1.bargain_price}}</li><hr>
+            <li><strong>Amount: </strong> {{form1.number}}</li><hr>
+                <li><strong>Category: </strong>{{form1.category}}</li><hr>
+            <li><strong>Image: </strong>{{form1.thumbnail}}</li><hr>
+            <li><strong>Short Description: </strong></li>
+                 {{form1.short_description}}<hr>
+              <li><strong>Full Description: </strong></li>
+             {{form1.full_description}}<hr>
+
+            </ol>
+      <button type = 'submit' name="create_prod" value = 'ok'>Create Product</button>
+</form>
+
+         </div>
+</div>
+
 {% endblock %}
 

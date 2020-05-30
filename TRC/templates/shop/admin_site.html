@@ -1,33 +1,64 @@
-{% extends 'base.html' %}
+{% extends 'base_admin2.html' %}
 
 {% block title %}
 Admin Panel
 {% endblock %}
 
 {% block content %}
-<h3>Welcome, {{user.username}} </h3>
+
+{% load static %}
+
+
+
+
+
+<div id="container">
+    <h3>Welcome, {{user.username}} </h3>
 <p>
     To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
     Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
     a także zarządzać historią zamówień i stanem producktow w sklepie.
 </p>
-<h3>Products: </h3>
-<ul>
-    <li><a href ='{% url "add_page"%}'>Create Product/ Category</a></li>
-    <li><a href ='{% url "all_products"%}'>All Products</li>
-    <li><a href ='{% url "orders_list_page"%}'>Orders list</li>
-</ul>
+<h4>Admin menu: </h4>
 
-<h3> Edit Page: </h3>
-<ul>
-    <li><a href ='{% url "edit_pages"%}'>Edit Page Content</li>
-    <li>Edit Shop's data</li>
-    <li></li>
-</ul>
-<h3> : </h3>
-<ul>
-    <li>Stats</li>
-    <li></li>
-</ul>
+
+    <p>
+    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
+    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
+    a także zarządzać historią zamówień i stanem producktow w sklepie.
+</p>
+
+    <p>
+    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
+    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
+    a także zarządzać historią zamówień i stanem producktow w sklepie.
+</p>
+
+    <p>
+    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
+    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
+    a także zarządzać historią zamówień i stanem producktow w sklepie.
+</p>
+
+    <p>
+    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
+    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
+    a także zarządzać historią zamówień i stanem producktow w sklepie.
+</p>
+
+    <p>
+    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
+    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
+    a także zarządzać historią zamówień i stanem producktow w sklepie.
+</p>
+    <p>
+    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
+    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
+    a także zarządzać historią zamówień i stanem producktow w sklepie.
+</p>
+</div>
+
+
+
 
 {%endblock %}

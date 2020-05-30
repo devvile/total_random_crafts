@@ -1,0 +1,17 @@
+{% extends 'base_admin2.html' %}
+
+
+{%block content%}
+
+<div class ='container'>
+    <div class = 'jumbotron'>
+<h4>Create Category</h4>
+        <hr>
+<form id ='new_category' method="post" action="">
+      {% csrf_token %}
+    {{form2}}
+      <button type = 'submit' name="create_cat" value = 'ok'>Create Category</button>
+</form>
+            </div>
+</div>
+{% endblock %}

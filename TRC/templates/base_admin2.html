@@ -75,7 +75,6 @@
 </nav>
 
     <div class="wrapper">
-        <!-- Sidebar  -->
         <nav id="sidebar">
             <div id="dismiss">
                 <i class="fas fa-arrow-left"></i>
@@ -91,13 +90,13 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Products</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#">Create Product</a>
+                            <a href="{%url 'add_page' %}">Create Product</a>
                         </li>
                         <li>
-                            <a href="#">Categories</a>
+                            <a href="{%url 'categories' %}">Categories</a>
                         </li>
                         <li>
-                            <a href="#">Products List</a>
+                            <a href="{%url 'all_products' %}">Products List</a>
                         </li>
                     </ul>
                 </li>
@@ -130,7 +129,7 @@
 
 
 
-<div class="container">
+<div class = 'container'>
 <div class = 'jumbotron'>
 
     {% block content %}
@@ -170,8 +169,6 @@
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
             });
         });
-
-          document.getElementById("sidebarCollapse").hidden = true;
 
     </script>
 </body>

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base_admin2.html' %}
 
 {% block title%}
 All Products
@@ -9,16 +9,27 @@ All Products
 
 <div class = 'container'>
 <div class = 'jumbotron'>
-    {%for product in product_list%}
+    <div class ='row'>
+    {%for category in category_list%}
+        <div class = 'col-lg-3'>
+    <div class ='container'>
+        <strong>{{category.name}}</strong>
+    </div>
+    <br>
+    {%for product in category.what_category.all%}
 <a href ='{%url "detail" product.id%}'>
-    {{product.name}}</a>
-    {{product.price}}
-    {{product.number}}
+    <strong>{{product.name}}</strong></a>
+            <span id="'price">{{product.price}}</span>
     {%if product.number == 0%}
     <span id="sold">Sold out</span>
+            {%else%}
+             <span id ="prod_number">{{product.number}}</span>
     {%endif%}
+            <a id = 'edit' href="#">edit</a>
     <br>
 {% endfor %}
-</div></div>
+    </div>
+    {% endfor %}
+    </div></div></div></div>
 {% endblock %}
 
