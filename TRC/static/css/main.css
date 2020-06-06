@@ -126,11 +126,11 @@ footer {
         }
 
 #logo {
-padding: 10px;
+padding: 5px;
 width:500px;
 height:131px;
  display: block;
-  margin-left: 10 px;
+  margin-left: -10 px;
   margin-right: auto;
 
 }
@@ -297,6 +297,7 @@ ul ul a {
 }
 
 #store_nav { height: 35px;
+margin-left: 10px;
 margin-right: 50px;
 
 }

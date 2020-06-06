@@ -13,9 +13,8 @@
 
 
 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-    <link rel ="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+    <link rel ="stylesheet" type="text/css" href="{% static '/css/main2.css' %}">
+
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale = 1.0">
@@ -35,107 +34,54 @@
 <div class ="bg">
 
 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nowy navbar </title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale = 1.0">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Open Admin menu</span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-
-                        </div>
-                                              <a class="navbar-brand" href="{% url 'shop'%}" id = 'nav_el'><img id ='store_nav' src="{% static 'img/store.png' %}"></a>
-  <a class="navbar-brand" href="{% url 'about'%}" id = 'nav_el'>About us</a>
-                        <a class="navbar-brand" href="{% url 'contact'%}" id = 'nav_el'>Contact</a>
-                                <a href="{% url 'index'%}"><img  id="logo" src="{% static 'img/logo3.png' %}"></a>
-
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-
-      </li>
-
-    </ul>
-         <div class="form-inline my-2 my-lg-0">
-             <a href="{% url 'shop_admin'%}"class="btn btn-secondary">Login</a></div>
-             <a href=" {% url 'cart' %}"><img  id="cart-icon" src="{% static 'img/cart.png' %}"></a>
-             <p id="cart-total">0</p>
-
+    </head>
+<div>
+<div class = 'mega-cont'>
+<div class = 'cont'>
+    <div class="box1">
+        <img class="logo" src ='{% static "/img/logo3.png"%}'>
     </div>
-  </div>
-</nav>
+    <div class="box2">
+<li id ="nav"><a href="{%url 'index'%}">Home</a></li>
+<li id ="nav"><a href="{%url 'shop'%}">Store</a></li>
+<li id ="nav"><a href="">Sales</a></li>
+<li id ="nav"><a href="{%url 'about'%}">About us</a></li>
+    </div>
+     <div class="box4">
+        <div class="form-inline my-2 my-lg-0">
+            <img id="cart-icon" src ='{% static "/img/bag.png"%}'>
+                     <p id="cart-total">0</p>
+         <a href="{% url 'shop_admin'%}"class="btn btn-secondary" id='login-button'>Login</a>
 
-    <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div id="dismiss">
-                <i class="fas fa-arrow-left"></i>
-            </div>
+     </div></div>
+<div class='box3'>
+    <hr>
+    {% block top %}
 
-            <div class="sidebar-header">
-                <h3>Admin Menu:</h3>
-            </div>
 
-            <ul class="list-unstyled components">
-                <p>Welcome {{user.username}}! </p>
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Products</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Create Product</a>
-                        </li>
-                        <li>
-                            <a href="#">Categories</a>
-                        </li>
-                        <li>
-                            <a href="#">Products List</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Statistics</a>
-                    <a href="#ordersSubmenu" data-toggle="collapse" aria-expanded="false">Orders</a>
-                    <ul class="collapse list-unstyled" id="ordersSubmenu">
-                        <li>
-                            <a href="#">Orders List</a>
-                        </li>
-                        <li>
-                            <a href="#"> Orders History</a>
-                        </li>
-                    </ul>
+</div>
+{% endblock %}
+</div>
 
-                        <li>
-                 <a href="#pagesSubmenu" data-toggle="collapse" aria-expanded="false">Edit Page</a>
-                    <ul class="collapse list-unstyled" id="pagesSubmenu">
-                        <li>
-                            <a href="#">Edit Home page</a>
-                        </li>
-                        <li>
-                            <a href="#"> Edit 'About us' page</a>
-                        </li>
-                          <a href="#"> Edit Adress</a>
-                        </li>
-            </ul>
-
-        </nav>
+<hr>
 
 
 
-
-<div class = 'jumbotron'>
+<div class ='content'>
 
     {% block content %}
 
     {% endblock %}
-</div>
 
-</div>
+
+</div></div>
          <footer>
         Made by .tore
     </footer>
@@ -149,28 +95,7 @@
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#sidebar").mCustomScrollbar({
-                theme: "minimal"
-            });
 
-            $('#dismiss, .overlay').on('click', function () {
-                $('#sidebar').removeClass('active');
-                $('.overlay').removeClass('active');
-            });
-
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').addClass('active');
-                $('.overlay').addClass('active');
-                $('.collapse.in').toggleClass('in');
-                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-            });
-        });
-
-          document.getElementById("sidebarCollapse").hidden = true;
-
-    </script>
 </body>
 
 </html>

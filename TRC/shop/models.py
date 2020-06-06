@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils import timezone
+
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -18,6 +20,7 @@ class Product(models.Model):
     full_description = models.TextField(max_length=500, default = ' no description')
     category = models.ManyToManyField(Category, related_name='what_category')
     thumbnail = models.ImageField(upload_to='static/img',default = None,null=True)
+    timestamp = models.DateTimeField(null=True)
 
     def __str__(self):
         return self.name

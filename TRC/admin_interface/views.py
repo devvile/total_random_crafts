@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from shop.models import Product, Category
 from shop.forms import ProductForm, CategoryForm
 from django.contrib.auth.decorators import login_required
+from django.utils import timezone
 
 @login_required
 def add_page(request):
@@ -48,7 +49,8 @@ def edit_data(request):
 @login_required
 def new_product(request):
         if request.method == "POST":
-            form1 = ProductForm(data=request.POST)
+            nowy =  Product(timestamp= timezone.now())
+            form1 = ProductForm(instance = nowy,data=request.POST)
             if form1.is_valid():
                 form1.save()
                 return redirect("index")

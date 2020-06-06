@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 {% load static %}
 {% block title %}
 {{category.name}}
@@ -9,6 +9,7 @@
 <div class = 'container'>
     <div class ='jumbotron'>
 <h2>{{category.name}}:</h2>
+
 <div class="row">
     {% for i in category.what_category.all %}
 

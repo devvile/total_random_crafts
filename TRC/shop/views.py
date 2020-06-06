@@ -3,8 +3,9 @@ from .models import Product, Category
 from django.contrib.auth.decorators import login_required
 
 def shop(request):
-    list_of_products = Product.objects.all()
-    kwargs = {'list_of_products': list_of_products}
+    list_of_products = Product.objects.all().order_by('-timestamp')
+    categories= Category.objects.all()
+    kwargs = {'list_of_products': list_of_products, 'categories': categories}
     return render(request, 'shop/shop.html', kwargs)
 
 

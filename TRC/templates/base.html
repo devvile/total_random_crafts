@@ -23,12 +23,9 @@
     </head>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style3.css">
-    <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
-    <!-- Font Awesome JS -->
+
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
@@ -43,32 +40,21 @@
                 <div class="container-fluid">
 
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left">
-
-                        </i>
-                        <span>Open Admin menu</span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
 
 
 
                                                 <a class="a.navbar-brand" href="{% url 'shop'%}" id = 'nav_el'><img id ='store_nav' src="{% static 'img/store.png' %}"></a>
-  <a class="navbar-brand" href="{% url 'about'%}" id = 'nav_el'>About us</a>
-                        <a class="navbar-brand" href="{% url 'contact'%}" id = 'nav_el'>Contact</a>
+  <a class="navbar-brand" href="{% url 'about'%}" id = 'nav_el'><img id ='store_nav' src="{% static 'img/about.png' %}"</a>
+                        <a class="navbar-brand" href="{% url 'contact'%}" id = 'nav_el'><img id ='store_nav' src="{% static 'img/contact.png' %}"</a>
                      <a href="{% url 'index'%}"><img  id="logo" src="{% static 'img/logo3.png' %}" class ='navbar-brand'></a>
 
 
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-
-      </li>
-
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="navbar-brand" href="{% url 'contact'%}" id = 'nav_el'></a>
+     </li>
     </ul>
          <div class="form-inline my-2 my-lg-0">
              <a href="{% url 'shop_admin'%}"class="btn btn-secondary">Login</a></div>
@@ -79,70 +65,15 @@
   </div>
 </nav>
 
-    <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div id="dismiss">
-                <i class="fas fa-arrow-left"></i>
-            </div>
-
-            <div class="sidebar-header">
-                <h3>Admin Menu:</h3>
-            </div>
-
-            <ul class="list-unstyled components">
-                <p>Welcome {{user.username}}! </p>
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Products</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Create Product</a>
-                        </li>
-                        <li>
-                            <a href="#">Categories</a>
-                        </li>
-                        <li>
-                            <a href="#">Products List</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Statistics</a>
-                    <a href="#ordersSubmenu" data-toggle="collapse" aria-expanded="false">Orders</a>
-                    <ul class="collapse list-unstyled" id="ordersSubmenu">
-                        <li>
-                            <a href="#">Orders List</a>
-                        </li>
-                        <li>
-                            <a href="#"> Orders History</a>
-                        </li>
-                    </ul>
-
-                        <li>
-                 <a href="#pagesSubmenu" data-toggle="collapse" aria-expanded="false">Edit Page</a>
-                    <ul class="collapse list-unstyled" id="pagesSubmenu">
-                        <li>
-                            <a href="#">Edit Home page</a>
-                        </li>
-                        <li>
-                            <a href="#"> Edit 'About us' page</a>
-                        </li>
-                          <a href="#"> Edit Adress</a>
-                        </li>
-            </ul>
-
-        </nav>
-
-
 
 <div class="container">
-<div class = 'jumbotron'>
+
 
     {% block content %}
 
     {% endblock %}
 </div>
-</div>
+    </div>
 </div>
          <footer>
         Made by .tore
