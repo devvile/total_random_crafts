@@ -5,3 +5,9 @@ $(document).ready(function () {
     });
 
 });
+
+
+/*
+        price.classList.toggle('price-active')
+        });
+*/

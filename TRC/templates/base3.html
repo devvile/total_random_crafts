@@ -8,22 +8,27 @@
         <meta name="description" content="Handcrafted goods shop">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale = 1.0">
     
-        <link rel ="stylesheet" type="text/css" href="{% static '/css/main2.css' %}">
+        <link rel ="stylesheet" type="text/css" href="{% static '/css/main3.css' %}">
 
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
-    <title>Total Random Crafts</title>
+    <title>{%block title%} {%endblock%}</title>
+    {%block js%}
+
+    {%endblock%}
+
+
 
 </head>
 
 <body>
-    <header>
+<header>
 <nav> 
     <div class="top-nav">
         <div></div>
         <div class="logo-container">
-            <img class="logo" src ='{% static "/img/logo3.png"%}'></div>
+            <img class="logo" src ='{% static "/img/logo4.png"%}'></div>
             <div class='user-int'>
                 <div class= 'sociale'>
                     <img id="social-icon" src ='{% static "/img/icons/fb.png"%}'>
@@ -41,11 +46,11 @@
 
     </div>
     <div class="nav-links">
-        <ul>    
-    <li class ="nav-link" id='home-nav'><a href="{%url 'index'%}">Home</a></li>
-    <li class ="nav-link" id='shop-nav'><a href="{%url 'shop'%}">Store</a></li>
-    <li class ="nav-link"><a href="">Sales</a></li>
-    <li class ="nav-link"><a href="{%url 'about'%}">About us</a></li>
+    <ul>    
+        <li class ="nav-link" id='home-nav'><a href="{%url 'index'%}">Home</a></li>
+        <li class ="nav-link" id='shop-nav'><a href="{%url 'shop'%}">Store</a></li>
+        <li class ="nav-link"><a href="{% url 'shop_category' 'Sales'%}">Sales</a></li>
+        <li class ="nav-link"><a href="{%url 'about'%}">About us</a></li>
     </ul>
     <hr>
     </div>
@@ -58,7 +63,7 @@
 
     {% endblock %}
     </div>
-    <hr>
+
 </nav>
 </header>
 
@@ -80,9 +85,9 @@
 
 
 
-         <footer>
+<footer>
         Made by .tore
-    </footer>
+</footer>
 
 
 </body>
