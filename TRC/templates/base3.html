@@ -8,17 +8,15 @@
         <meta name="description" content="Handcrafted goods shop">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale = 1.0">
     
-        <link rel ="stylesheet" type="text/css" href="{% static '/css/main3.css' %}">
+        <link rel ="stylesheet" type="text/css" href="{% static '/css/main2.css' %}">
 
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
     <title>{%block title%} {%endblock%}</title>
-    {%block js%}
+        {% block css%}
 
-    {%endblock%}
-
-
+        {%endblock%}
 
 </head>
 
@@ -36,7 +34,8 @@
                     <img id="social-icon" src ='{% static "/img/icons/twitter.png"%}'>
                 </div>
                 <div class="koszyk">
-                    <button class ='login' action="{% url 'shop_admin'%}"> Login</button>
+                    <form action="{% url 'shop_admin' %}">
+                    <button class ='login' href"> Login</button></form>
                     <img id="cart-icon" src ='{% static "/img/icons/bag.png"%}'>
                     
                     <p id="cart-total">0</p>
@@ -88,6 +87,12 @@
 <footer>
         Made by .tore
 </footer>
+
+
+
+    {%block js%}
+
+    {%endblock%}
 
 
 </body>

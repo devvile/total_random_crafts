@@ -4,40 +4,49 @@
 {%block title%}
 Total Random Crafts
 {% endblock %}
+
+
+{%block css%}
+<link rel ="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+{%endblock%}
 {% block content %}
 
-<div class = 'container'>
-    <div class ='jumbotron'>
-        <h3>Welcome to Total Random Crafts!</h3>
-        <hr>
-        <p>
-        {{text1.content}}
-        </p>
-
-                <img id ="photo_main" src='{% static "/img/zdjecia.png" %}'></div>
-    <h3>Random Craft for You: </h3>
-
-        <div class="box-element product">
-<div class = 'container'>
-    <a href ='{%url "detail" product.id%}'>
-    <img class= 'thumbnail' src ='{% static "/img/slonik.png" %}'>
-    </a>
-</div>
-
-            <a href ='{%url "detail" product.id%}'>{{product.name}}</a><br>
-            <strong>Price: </strong>{{product.price}}
-                {%if product.number == 0%}
-                <span id ='sold'> Sold Out</span>
-                {%endif%}
-                </br>
-                <hr>
-
-                <span id = 'opis_produktu'>{{product.short_description}}<br>
-    Categories: {% for j in product.category.all %}</span>
-                <span id = 'opis_produktu'><a href = '{%url "shop_category" j.name %}'>{{product.name}}</a></span>
-    {% endfor %}
-            </div>
+<div class = 'page-content'>
+    <div class="heading">
+        <h3 class='welcome' >Welcome to Total Random Crafts!</h3>
+    </div>
+    <div class="carousel">
+        <img id ="photo_main" src='{% static "/img/content/polaroid_on_string.png" %}'>
+    </div>
+    <div class="site-bottom">
+        <div class="random">
+            <h3 class="opis">{{text1.content}}</h3>
         </div>
+        <div class="polaroid">
+            <div class="fot">
+                <a href ='{%url "detail" product.id%}'>
+                <img class= 'thumbnail' src ='{% static "/img/slonik.png" %}'>
+                </a>
+            </div>
+        <div class="bot">
+            <div class="name"><a class='prod_name' href ='{%url "detail" product.id%}'>{{product.name}}</a><br></div>
+            <div class="price"><strong>Price: </strong>{{product.price}}
+                        {%if product.number == 0%}
+                        <span id ='sold'> Sold Out</span>
+                        {%endif%}
+            </br>
+            </div>
+            <div class="desc">
+
+                    <span id = 'opis_produktu'>{{product.short_description}}<br>
+                    Categories: {% for j in product.category.all %}</span>
+                    <span id = 'opis_produktu'><a href = '{%url "shop_category" j.name %}'>{{product.name}}</a></span>
+                    {% endfor %}
+            </div>
+                
+        </div>
+    </div>
 
 
 

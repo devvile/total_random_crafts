@@ -1,8 +1,17 @@
-{% extends 'base_admin2.html' %}
+{% extends 'base_admin.html' %}
 
 {% block title%}
 All Products
 {% endblock %}
+
+{%block css%}
+
+<style>
+  #products-nav {
+    border-bottom: 5px solid var(--main-color);
+  }
+</style>
+{% endblock%}
 
 {% block content %}
 <h2>All Products</h2>

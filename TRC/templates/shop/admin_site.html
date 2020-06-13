@@ -1,64 +1,42 @@
-{% extends 'base_admin2.html' %}
-
-{% block title %}
-Admin Panel
-{% endblock %}
-
-{% block content %}
-
-{% load static %}
-
-
-
-
-
-<div id="container">
-    <h3>Welcome, {{user.username}} </h3>
-<p>
-    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
-    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
-    a także zarządzać historią zamówień i stanem producktow w sklepie.
-</p>
-<h4>Admin menu: </h4>
-
-
-    <p>
-    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
-    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
-    a także zarządzać historią zamówień i stanem producktow w sklepie.
-</p>
-
-    <p>
-    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
-    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
-    a także zarządzać historią zamówień i stanem producktow w sklepie.
-</p>
-
-    <p>
-    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
-    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
-    a także zarządzać historią zamówień i stanem producktow w sklepie.
-</p>
-
-    <p>
-    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
-    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
-    a także zarządzać historią zamówień i stanem producktow w sklepie.
-</p>
-
-    <p>
-    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
-    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
-    a także zarządzać historią zamówień i stanem producktow w sklepie.
-</p>
-    <p>
-    To jest strona administratora. Docelowo ma być interfejsem, z którego możliwe będzie zarządzanie serwisem.<br>
-    Administrator bedzie mogl dodawac, usuwac i edytowac produkty w sklepie. Bedzie mogl zarzadzac trescia na podstronach,<br>
-    a także zarządzać historią zamówień i stanem producktow w sklepie.
-</p>
+{% extends 'base_admin.html' %} {% load static %} {% block title %} Admin Panel
+{% endblock %} {%block css%}
+<link rel="stylesheet" href="{% static '/css/admin_stats.css' %}">
+{% endblock%} {% block top %}
+<div>
+  <ul class="all-admin-items">
+    <li class = 'cat-item'><a href="#">REVENUE</a></li>
+    <li class = 'cat-item'><a href="#">SALES</a></li>
+    <li class = 'cat-item'><a href="#">USERS</a></li>
+    <li class = 'cat-item'><a href="#">SOCIAL MEDIA</a></li>
 </div>
 
+{% endblock %}
+{% block content %}
 
-
+<div class="page-content">
+  <div class ="first_row">
+      <div class="gorny">
+        <div class='gorny-left'><h3>Shop Performance:</h3></div>
+        <div class='gorny-right'><button class="view-all">View all</button></div>
+      </div>
+      <div class="srodkowy">
+        <div class='srodkowy-left'><h5>Total Revenue:</h5></div>
+        <div class='srodkowy-center'><h5>Bestseller:</h5></div>
+        <div class='srodkowy-right'><h5>Total Orders:</h5></div>
+      </div>
+      <div class="dolny">
+        <button class="view-orders">View awaiting orders</button>
+      </div>
+    </div>
+  <div class ="second_row">
+   <div class="tablica2">
+    <img src="{%static './'%}" alt="">
+   </div>
+     <div class="tablica3">
+      <h3> tab4</h3>
+    </div>
+   </div>
+  </div>
+</div>
 
 {%endblock %}

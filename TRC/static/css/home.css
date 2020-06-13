@@ -1,0 +1,111 @@
+.page-content {
+  background-color: white;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.heading {
+  position: relative;
+  font-family: "Sue Ellen Francisco", cursive;
+  font-size: 4.5em;
+  font-weight: 100;
+  text-align: center;
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+
+#photo_main {
+  width: 80%;
+  height: 85vh;
+  position: relative;
+  bottom: 100px;
+}
+
+.site-bottom {
+  position: relative;
+  bottom: 200px;
+}
+
+.polaroid {
+  width: 38vw;
+  height: 90vh;
+  margin: auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.opis {
+  margin: 0 10vw 10vh 10vw;
+  font-size: 2em;
+  text-align: center;
+}
+
+.thumbnail {
+  height: 60vh;
+  width: 36vw;
+  position: relative;
+  justify-self: center;
+}
+
+.prod_name {
+  margin: 0 10vw 10vh 10vw;
+  font-size: 3em;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+.bot {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .heading {
+    font-size: 3.4em;
+  }
+  .polaroid{
+    width: 45vw;
+    height: 85vh;
+  }
+  .prod_name{
+    font-size: 2.5em;
+  }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .heading {
+    font-size: 3.2em;
+  }
+
+  .polaroid {
+    width: 50vw;
+    height: 70vh;
+  }
+  .prod_name{
+    font-size: 2.3em;
+  }
+}
+
+@media screen and (max-width: 724px) {
+  .heading {
+    font-size: 2.2em;
+  }
+
+  .polaroid {
+    width: 70vw;
+    height: 70vh;
+  }
+  .prod_name{
+    font-size: 1.8em;
+  }
+}
