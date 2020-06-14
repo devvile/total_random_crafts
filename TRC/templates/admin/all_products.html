@@ -1,23 +1,32 @@
 {% extends 'base_admin.html' %}
-
+{%load static%}
 {% block title%}
 All Products
 {% endblock %}
 
 {%block css%}
 
-<style>
-  #products-nav {
-    border-bottom: 5px solid var(--main-color);
-  }
-</style>
+<link rel ="stylesheet" href="{%static './css/products.css'%}">
+
+{% endblock%}
+
+{%block top%}
+<div>
+  <ul class="all-cat-items">
+    <li class="cat-item">
+      <a id="cat-link" href="#">All Products</a>
+    </li>
+    <li class="cat-item">
+      <a id="cat-link" href="{%url 'add_page'%}">Add Product</a>
+    </li>
+    <li class="cat-item"><a id="cat-link" href="{% url 'categories'%}">Categories</a></li>
+  </ul>
+</div>
 {% endblock%}
 
 {% block content %}
 <h2>All Products</h2>
 
-<div class = 'container'>
-<div class = 'jumbotron'>
     <div class ='row'>
     {%for category in category_list%}
         <div class = 'col-lg-3'>

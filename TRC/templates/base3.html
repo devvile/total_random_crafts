@@ -12,6 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
 
     <title>{%block title%} {%endblock%}</title>
         {% block css%}
@@ -22,11 +23,13 @@
 
 <body>
 <header>
+
 <nav> 
+
     <div class="top-nav">
-        <div></div>
-        <div class="logo-container">
-            <img class="logo" src ='{% static "/img/logo4.png"%}'></div>
+        <div class="lajk"><img src="{% static './img/content/like.png'%}" alt="facebook like"></div>
+        <div class="logo-container"><a href="{%url 'index' %}">
+            <img class="logo" src ='{% static "/img/logo4.png"%}'></a></div>
             <div class='user-int'>
                 <div class= 'sociale'>
                     <img id="social-icon" src ='{% static "/img/icons/fb.png"%}'>

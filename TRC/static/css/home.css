@@ -4,6 +4,21 @@
   flex-flow: column wrap;
 }
 
+:root {
+  --main-color: hsl(189, 100%, 50%);
+}
+
+#home-nav {
+  border-bottom: 5px solid var(--main-color);
+}
+
+.lajk {
+  position: fixed;
+  top: 40px;
+  left: 0px;
+  z-index: 2;
+}
+
 .heading {
   position: relative;
   font-family: "Sue Ellen Francisco", cursive;
@@ -36,6 +51,7 @@
   flex-flow: column wrap;
   justify-content: center;
   position: relative;
+  align-items: center;
 }
 
 .opis {
@@ -49,6 +65,7 @@
   width: 36vw;
   position: relative;
   justify-self: center;
+  padding: 10px;
 }
 
 .prod_name {
@@ -66,20 +83,23 @@
   flex-direction: column;
 }
 
-
-
-
 @media screen and (max-width: 1200px) {
   .heading {
     font-size: 3.4em;
   }
-  .polaroid{
+  .polaroid {
     width: 45vw;
     height: 85vh;
   }
-  .prod_name{
+  .prod_name {
     font-size: 2.5em;
+    letter-spacing: 5px;
   }
+  .thumbnail {
+    height: 60vh;
+    width: 42vw;
+    position: relative;
+    justify-self: center;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -89,10 +109,16 @@
 
   .polaroid {
     width: 50vw;
-    height: 70vh;
+    height: 80vh;
   }
-  .prod_name{
+  .prod_name {
     font-size: 2.3em;
+  }
+  .thumbnail {
+    height: 60vh;
+    width: 48vw;
+    position: relative;
+    justify-self: center;
   }
 }
 
@@ -103,9 +129,14 @@
 
   .polaroid {
     width: 70vw;
-    height: 70vh;
+    height: 90vh;
   }
-  .prod_name{
+  .prod_name {
     font-size: 1.8em;
+  }
+  .thumbnail {
+    height: 90vh;
+    width: 68vw;
+    position: relative;
   }
 }

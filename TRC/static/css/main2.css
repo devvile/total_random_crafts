@@ -15,6 +15,7 @@ nav {
   width: 90%;
   margin: auto;
   font-family: "Montserrat", sans-serif;
+  position: relative;
 }
 
 .nav-links {
@@ -44,8 +45,9 @@ nav {
 
 .top-nav {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
+  position: relative;
 }
 
 .user-int {
@@ -55,22 +57,24 @@ nav {
   justify-content: flex-end;
 }
 
+
+
 #cart-icon {
   height: 25px;
   width: 25px;
   margin: 10px;
+  position: relative;
+  top:10px;
 }
 
 .logo-container {
-  justify-self: flex-end;
-  align-items: center;
+display: flex;
 }
 
 .logo {
   position: relative;
-  left: 42%;
-  height: 95%;
-  width: 90%;
+  justify-self: center;
+  left:26vw;
 }
 
 .koszyk {
@@ -98,6 +102,18 @@ nav {
   justify-self: center;
   align-items: center;
   position: relative;
+}
+
+.heading{
+  font-family: "Sue Ellen Francisco", cursive;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3.0rem;
+}
+
+section p{
+  font-family:"Sue Ellen Francisco", cursive;
+  font-size: 2em;
 }
 
 #social-icon {
@@ -166,10 +182,10 @@ nav {
 }
 
 .polaroid {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   margin: 10px;
   background-color: white;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 5px;
   box-shadow: 5px 12px 20px;
 }
 
@@ -185,19 +201,47 @@ nav {
 
 .opis {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-family: "Permanent Marker", cursive;
   font-size: 1.8em;
+  justify-content: center;
 }
 
+.lajk {
+  position: fixed;
+  top: 40px;
+  left: 0px;
+}
+.photo-zone{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+}
+.photo1{
+  width: 40vw;
+  height: 60vh;
+}
+.photo2{
+  width: 40vw;
+  height: 60vh;
+}
 .hidd {
   display: none;
 }
+.cat-name{
+margin:20px;
+text-align: center;
+font-family: "Sue Ellen Francisco", cursive;
+font-size: 3.0 em;
+}
+
 
 footer {
   background-color: var(--main-color);
   border-top: 2px solid gray;
+  margin-top: 40px;
+  bottom: 0px;
+  margin-top: 20px;
 }
 
 

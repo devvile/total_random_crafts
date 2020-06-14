@@ -1,0 +1,23 @@
+#products-nav {
+  border-bottom: 5px solid var(--main-color);
+}
+.all-cat-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 10vh;
+  align-items: flex-start;
+}
+
+.cat-item {
+  list-style: none;
+}
+#cat-link {
+  text-decoration: none;
+  padding: 10px;
+  color: darkgrey;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 550;
+  text-transform: uppercase;
+}

@@ -1,20 +1,31 @@
-{% extends 'base3.html' %}
-
-{% block title %}
-   About TRC
-{% endblock %}
-
-
-{% block content %}
-<div class = 'container'>
-    <div class ='jumbotron'>
-<h2>Contact</h2>
+{% extends 'base3.html' %} {% block title %} Contact Details {% endblock %}
+{%block top%}
+<div>
+  <ul class="all-cat-items">
+    <li class="cat-item">
+      <a id="cat-link" href="{%url 'about'%}">About Us</a>
+    </li>
+    <li class="cat-item">
+      <a id="cat-link" href="{%url 'contact'%}">Contact</a>
+    </li>
+    <li class="cat-item"><a id="cat-link" href="">Delivery Details</a></li>
+  </ul>
+</div>
+{% endblock%} {% block content %}
+<div class="main-content">
+  <section>
+    <div class="heading">
+      <h2>Contact</h2>
+    </div>
 
     <strong>Total Random Crafts</strong>
-        <p>DieSachbearbeiter Choriner Straße 49 <br>
-10435 Berlin
-          <br>  <strong>E-Mail:</strong> moinsen2@blindtextgenerator.com
-</p>
-    </div>
+    <p>
+      DieSachbearbeiter Choriner Straße 49 <br />
+      10435 Berlin
+      <br />
+      <strong>E-Mail:</strong> moinsen2@blindtextgenerator.com
+    </p>
+  </section>
 </div>
+
 {% endblock %}

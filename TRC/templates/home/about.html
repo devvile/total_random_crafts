@@ -1,27 +1,42 @@
-{% extends 'base3.html' %}
-
-{% block title %}
-   About TRC
-{% endblock %}
-
-   {% block top %}
-
-
-<li class="" ="cat-item"><a href="{% url 'contact'%}">Contact</a></li>
+{% extends 'base3.html' %} {%load static %} {% block title %} About Total Random
+Crafts {%endblock %} {%block top%}
+<div>
+  <ul class="all-cat-items">
+    <li class="cat-item"><a id="cat-link" href="">About Us</a></li>
+    <li class="cat-item">
+      <a id="cat-link" href="{%url 'contact'%}">Contact</a>
+    </li>
+    <li class="cat-item"><a id="cat-link" href="">Delivery Details</a></li>
+  </ul>
 </div>
-{% endblock %}
 
-
-{% block content %}
-<div class = 'container'>
-    <div class ='jumbotron'>
-<h2>About TRC</h2>
-<p>
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+{% endblock %} {% block content %}
+<div class="main-content">
+  <section>
+    <div class="heading">
+      <h2>TRC</h2>
     </div>
+    <p>
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.<br />
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+      aliquip ex ea commodo consequat. <br />
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+      dolore eu fugiat nulla pariatur.<br />
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+      deserunt mollit anim id est laborum.
+    </p>
+    <div class="photo-zone">
+      <div class="photo1">
+        <img src="{% static './img/content/about1.jpg' %}" alt="about us" />
+      </div>
+      <div class="photo2">
+        <img
+          src="{% static './img/content/about2.jpg' %}"
+          alt="about us photo2"
+        />
+      </div>
+    </div>
+  </section>
 </div>
 {% endblock %}

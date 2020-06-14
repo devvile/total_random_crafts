@@ -9,7 +9,5 @@ urlpatterns = [path('add',views.add_page,name='add_page'),
                path('edit_pages',views.edit_pages,name ='edit_pages'),
                path('edit_data',views.edit_data,name='edit_data'),
                path('create', views.new_product, name='new_product'),
-path('categories',views.categories,name='categories')
-
-
+                path('categories',views.categories,name='categories')
 ]

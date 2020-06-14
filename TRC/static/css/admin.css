@@ -62,15 +62,14 @@ nav {
 }
 
 .logo-container {
-  justify-self: flex-end;
-  align-items: center;
+  display: flex;
 }
 
 .logo {
   position: relative;
-  left: 36%;
-  height: 80%;
-  width: 90%;
+  justify-self: center;
+  left: 10.5vw;
+  align-self: center;
 }
 
 .right-side {

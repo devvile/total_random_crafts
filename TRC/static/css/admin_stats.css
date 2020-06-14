@@ -81,6 +81,16 @@ h5 {
   align-self: center;
   left: 40%;
 }
+.logo-container {
+  display: flex;
+}
+
+.logo {
+  position: relative;
+  justify-self: center;
+  left: 10.5vw;
+  align-self: center;
+}
 
 .view-orders {
   border: 4px solid var(--main-color);

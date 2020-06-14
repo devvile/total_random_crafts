@@ -16,8 +16,9 @@ def detail(request, id):
 
 def category(request, name):
     category = Category.objects.get(name=name)
-    kwargs = {'category': category}
-    return render(request, 'shop/categories.html', kwargs)
+    categories= Category.objects.all()
+    context = {'category': category, 'categories':categories}
+    return render(request, 'shop/categories.html', context)
 
 @login_required
 def admin_site(request):
