@@ -1,0 +1,84 @@
+.photo-zone {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-between;
+}
+
+.photo1 {
+  width: 40vw;
+  padding: 10px;
+  height: 80vh;
+}
+
+.photo2 {
+  width: 30vw;
+  padding: 10px;
+  height: 80vh;
+}
+
+.page-content {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.bot {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  position: relative;
+  bottom: 50px;
+}
+
+#about-nav {
+  border-bottom: 5px solid var(--main-color);
+}
+
+#delivery-man {
+  border-radius: 5px;
+  padding: 0 20px 20px 20px;
+}
+
+#contact-image {
+  width: 100vw;
+}
+
+.top-sign {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  bottom: 50px;
+}
+
+#about_photo {
+  margin: auto;
+  align-self: center;
+}
+
+.contact-data {
+  position: absolute;
+  background-color: white;
+  opacity: 0.5;
+  height: 100%;
+  right: 20px;
+  padding: 20px;
+}
+
+.page-content {
+  position: relative;
+}
+
+#delivery-man {
+  width: 100vw;
+  position: relative;
+  margin: 10px 0 20px 0;
+}
+
+.text-field {
+  z-index: 2;
+  align-self: flex-end;
+  height: 100%;
+  font-size: 1rem;
+  width: 90vw;
+  margin: auto;
+}

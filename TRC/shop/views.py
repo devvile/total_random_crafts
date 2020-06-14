@@ -28,6 +28,11 @@ def admin_site(request):
 def cart(request):
     return render(request,'shop/admin_site.html')
 
+@login_required
+def sale(request):
+    categories= Category.objects.all()
+    context = {'categories':categories}
+    return render(request,'shop/sale.html',context)
 
 @login_required
 def new_product(request):

@@ -15,8 +15,10 @@
 
 {% block top %}
 <div>
-    <ul class="all-cat-items">
-
+        <ul class="all-cat-items">
+            <li class="cat-item">
+              <a id="cat-link" href="{%url 'sale'%}"> Sale</a>
+            </li>
     {% for cat in categories %}
     <li class = 'cat-item'><a id ='cat-link'  href="{%url 'shop_category' cat.name%}"> {{cat.name}}</a> </li>
     {% endfor %}

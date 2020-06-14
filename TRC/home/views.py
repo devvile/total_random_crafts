@@ -17,5 +17,7 @@ def about_us(request):
 def contact(request):
     return render(request,'home/contact.html')
 
+def delivery(request):
+    return render(request,'home/delivery.html')
 
 

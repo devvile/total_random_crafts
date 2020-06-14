@@ -1,0 +1,51 @@
+{% extends 'base3.html' %} {%load static%} {% block title %} Contact Details
+{%endblock %} {%block css%}
+
+<link rel="stylesheet" href="{%static './css/about.css'%}" />
+
+{% endblock%} {%block top%}
+<div>
+  <ul class="all-cat-items">
+    <li class="cat-item">
+      <a id="cat-link" href="{%url 'about'%}">About Us</a>
+    </li>
+    <li class="cat-item">
+      <a id="cat-link" href="{%url 'contact'%}">Contact</a>
+    </li>
+    <li class="cat-item"><a id="cat-link" href="">Shipping Details</a></li>
+  </ul>
+</div>
+{% endblock%} {% block content %}
+<div class="main-content">
+  <section>
+    <div class="page-content">
+      <div class="top-sign">
+        <img
+          id="about_photo"
+          src="{% static './img/content/about_igla.png'%}"
+          alt="about-top"
+        />
+      </div>
+
+      <div class="image-field">
+        <img id='delivery-man' src="{% static './img/content/delivery.jpg'%}" alt="delivery-image">
+      </div>
+      <div class="text-field">
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+        </p>
+      </div>
+        </div>
+      </p>
+    </div>
+  </section>
+</div>
+
+{% endblock %}

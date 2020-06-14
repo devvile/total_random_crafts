@@ -1,0 +1,19 @@
+#sale-nav {
+  border-bottom: 5px solid var(--main-color);
+}
+.main-content {
+  display: flex;
+  flex-flow: column;
+}
+
+.top-sign {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+#sale_photo {
+  margin: auto;
+  justify-self: left;
+  width: 80vw;
+}

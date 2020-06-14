@@ -19,6 +19,7 @@ nav {
 
 .nav-links {
   padding: 0px 10px 5px 10px;
+  text-transform: uppercase;
 }
 .nav-links ul {
   list-style: none;

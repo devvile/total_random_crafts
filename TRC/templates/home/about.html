@@ -1,20 +1,30 @@
 {% extends 'base3.html' %} {%load static %} {% block title %} About Total Random
-Crafts {%endblock %} {%block top%}
+Crafts {%endblock %} {%block css%}
+
+<link rel="stylesheet" href="{%static './css/about.css'%}" />
+
+{% endblock%} {%block top%}
 <div>
   <ul class="all-cat-items">
     <li class="cat-item"><a id="cat-link" href="">About Us</a></li>
     <li class="cat-item">
       <a id="cat-link" href="{%url 'contact'%}">Contact</a>
     </li>
-    <li class="cat-item"><a id="cat-link" href="">Delivery Details</a></li>
+    <li class="cat-item">
+      <a id="cat-link" href="{%url 'delivery'%}">Shipping Details</a>
+    </li>
   </ul>
 </div>
 
 {% endblock %} {% block content %}
 <div class="main-content">
   <section>
-    <div class="heading">
-      <h2>TRC</h2>
+    <div class="top-sign">
+      <img
+        id="about_photo"
+        src="{% static './img/content/about_igla.png'%}"
+        alt="about-top"
+      />
     </div>
     <p>
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -27,11 +37,16 @@ Crafts {%endblock %} {%block top%}
       deserunt mollit anim id est laborum.
     </p>
     <div class="photo-zone">
-      <div class="photo1">
-        <img src="{% static './img/content/about1.jpg' %}" alt="about us" />
-      </div>
-      <div class="photo2">
+      <div>
         <img
+          class="photo1"
+          src="{% static './img/content/about1.jpg' %}"
+          alt="about us"
+        />
+      </div>
+      <div>
+        <img
+          class="photo2"
           src="{% static './img/content/about2.jpg' %}"
           alt="about us photo2"
         />
