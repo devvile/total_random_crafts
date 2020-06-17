@@ -1,19 +1,29 @@
-{%extends 'base3.html' %}
-{%block title%}
-{% load static %}
-{{product.name}}
-{% endblock %}
-{% block content %}
-    <h3> Product detail:</h3>
-<div class = 'container'>
-        <img class ='thumbnail' src ='/{{product.thumbnail.url}}'>
-    <h2>{{product.name}}</h2>
-<strong>Price: </strong>{{product.price}}</br>
-{{product.full_description}}<br>
-Categories:
-    {% for j in product.category.all %}
-<a href = '{%url "shop_category" j.name %}'>{{j.name}}</a>
+{%extends 'base3.html' %} {% load static %} {%block css%}
+<link rel="stylesheet" type="text/css" href="{% static '/css/detail.css' %}" />
+{%endblock%} {%block title%} {{product.name}} {%endblock %} {% block content %}
+
+<div class="main-content">
+  <div class="box1">
+    <div class="polaroid">
+      <div class="product-photo">
+        <div class="thumbnail-container">
+          <img class="thumbnail" src="/{{product.thumbnail.url}}" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box2">
+    <h1>Box2</h1>
+  </div>
+  <div class="box3">
+    <div class="mini" id="mini1">x</div>
+    <div class="mini" id="mini2">x</div>
+    <div class="mini" id="mini3">x</div>
+  </div>
+  <div class="box4">
+    <div class="tabliczka">Shipping cost</div>
+    <div class="tabliczka">Product descritpion</div>
+    <div class="tabliczka">Return</div>
+  </div>
 </div>
-    {% endfor %}
-<hr>
 {% endblock %}
