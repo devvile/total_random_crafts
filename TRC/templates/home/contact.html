@@ -19,29 +19,61 @@
 {% endblock%} {% block content %}
 <div class="main-content">
   <section>
+    <div class="top-sign">
+      <img
+        id="contact_photo"
+        src="{% static './img/content/contact-head.png'%}"
+        alt="about-top"
+      />
+    </div>
     <div class="page-content">
-      <div class="contact-data">
-        <div class="heading">
-          <h2>Contact</h2>
+        <div class="list"> 
+          <div class="list-img">
+            <img
+              id='buzia-img-dir'
+              src="{% static './img/content/contact_list.png'%}"
+              alt="about-top"
+            />
+          </div>
+          <div class="list-text">
+            <p>
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.ke
+            </p>
+          </div>
+      </div>
+      <div class="buzia">
+        <div class="buzia-img">
+          <img
+            id='buzia-img-dir'
+            src="{% static './img/content/contact_buzia.png'%}"
+            alt="about-top"
+            />
         </div>
-
-        <strong>Total Random Crafts</strong>
-        <p>
-          DieSachbearbeiter Choriner Straße 49 <br />
-          10435 Berlin
-          <br />
-          <strong>E-Mail:</strong> moinsen2@blindtextgenerator.com
-        </p>
+        <div class="buzia-text">
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.ke2
+          </p>
+        </div>
       </div>
-      <div class="pic">
-        <img
-          src="{% static './img/content/contact.jpg'%}"
-          id="contact-image"
-          alt="contact image"
+        
+      <div class="skrzynka"> 
+        <div class="skrzynka-img">
+          <img
+          id='skrzynka-img-dir'
+          src="{% static './img/content/contact_skrzynka.png'%}"
+          alt="about-top"
         />
-      </div>
+        </div>
+        <div class="skrzynka-text">
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
     </div>
   </section>
-</div>
 
-{% endblock %}
+  {% endblock %}
+</div>

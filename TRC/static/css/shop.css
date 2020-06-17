@@ -1,42 +1,29 @@
-#sale-nav {
+#shop-nav {
   border-bottom: 5px solid var(--main-color);
 }
 
-.top-sign {
-  display: flex;
-  justify-items: center;
-  align-items: flex-start;
-  justify-content: space-between;
-  height: 30vh;
+#store-pic {
+  width: 90vw;
+  margin-bottom: 10px;
   position: relative;
   bottom: 30px;
 }
 
-.sale1 {
-  order: 1;
-}
-.sale2 {
-  order: 3;
-}
-.sale3 {
-  order: 2;
-  right: 40px;
-  position: relative;
+#store-pic:hover {
+  transform: translate(0%, 10%);
+  animation: buj 0.7s ease;
 }
 
-#sale_photo1 {
-  height: 15vh;
+.lajk:hover {
+  cursor: pointer;
+  animation: likemove 1s ease;
 }
 
-#sale_photo2 {
-  height: 12vh;
+#store-pic:hover .lajk {
+  transform: translate(0%, 10%);
 }
 
-#sale_photo3 {
-  height: 12vh;
-}
-
-.thumbnail-sale {
+.thumbnail-shop {
   width: 300px;
   height: 300px;
   border: 1px solid black;
@@ -61,10 +48,6 @@
   justify-self: center;
   opacity: 0;
 }
-.bot {
-  display: flex;
-  flex-direction: column;
-}
 
 .polaroid:hover .reverse-image {
   opacity: 1;
@@ -72,13 +55,19 @@
   transition: 0.3s ease-in;
 }
 
-.polaroid:hover .thumbnail-sale {
+.polaroid:hover .thumbnail-shop {
   opacity: 0;
 }
 
 .polaroid:hover .duch2 {
   opacity: 1;
   transition: 0.5s ease 0.3s;
+}
+
+.polaroid {
+  display: flex;
+  flex-flow: column wrap;
+  cursor: pointer;
 }
 
 .duch2 {
@@ -89,7 +78,12 @@
   color: whitesmoke;
   opacity: 0;
   right: 50%;
-  top: 50%;
+  top: 70%;
+}
+.bot {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 
 .product_name {
@@ -100,7 +94,37 @@
   text-align: center;
 }
 
-#barg-span {
-  text-decoration-line: line-through;
-  font-size: 40px;
+#sold {
+  transform: translateY(-110px) translateX(-10px);
+  font-size: 60px;
+}
+
+@keyframes likemove {
+  0% {
+    transform: translate(0%, 0);
+  }
+  25% {
+    transform: translate(0%, 35%);
+  }
+  75% {
+    transform: translate(0%, -35%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes buj {
+  0% {
+    transform: translate(0%, 0);
+  }
+  25% {
+    transform: translate(0%, 35%);
+  }
+  75% {
+    transform: translate(0%, -35%);
+  }
+  100% {
+    transform: translate(0%, 0);
+  }
 }

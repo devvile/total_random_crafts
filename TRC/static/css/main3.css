@@ -10,7 +10,6 @@
   }
 
 nav{
-    margin-top: 10px;
     display:flex;
     flex-flow: column wrap;
     width: 90%;
@@ -31,7 +30,7 @@ padding: 0px 10px 5px 10px;
 }
 
 .nav-link{
-    padding: 12px;
+    padding: 8 0px;
 }
 
 .nav-link:hover{
@@ -72,8 +71,8 @@ padding: 0px 10px 5px 10px;
 }
 
 .logo{ 
-    position: relative;
-    left: 42%;
+    position: absolute;
+    justify-content: center;
     height: 95%;
     width: 90%;
 }
@@ -128,7 +127,7 @@ margin-left: 30px;
 }
 #cat-link{
     text-decoration: none;
-    padding: 10px;
+    padding: 0 10px;
     color: darkgrey;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.1rem;
@@ -185,7 +184,6 @@ justify-self: center;
     box-shadow: 5px 12px 20px;
 
 }
-
 
 
 .nav-active{

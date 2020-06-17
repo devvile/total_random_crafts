@@ -8,8 +8,8 @@
   --main-color: hsl(189, 100%, 50%)
 }
 
+
 nav {
-  margin-top: 10px;
   display: flex;
   flex-flow: column wrap;
   width: 90%;
@@ -19,7 +19,7 @@ nav {
 }
 
 .nav-links {
-  padding: 0px 10px 0px 10px;
+  padding: 0px 10px 0px 5px;
 }
 .nav-links ul {
   list-style: none;
@@ -29,7 +29,7 @@ nav {
 }
 
 .nav-link {
-  padding: 0 12px 0 12px;
+  padding: 20px 12px 0 12px;
   text-transform: uppercase;
 }
 
@@ -70,12 +70,14 @@ nav {
 
 .logo-container {
 display: flex;
+justify-self: center;
 }
 
 .logo {
-  position: relative;
-  justify-self: center;
-  left:26vw;
+  position: absolute;
+margin:auto;
+left:30%;
+
 }
 
 .koszyk {
@@ -112,6 +114,7 @@ display: flex;
   font-size: 3.0rem;
 }
 
+
 section p{
   font-family:"Sue Ellen Francisco", cursive;
   font-size: 2em;
@@ -142,7 +145,7 @@ section{
 }
 #cat-link {
   text-decoration: none;
-  padding: 10px;
+  padding: 0px 10px;
   color: darkgrey;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.1rem;
@@ -160,7 +163,7 @@ section{
   display: flex;
   flex-flow: row wrap;
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
   justify-content: space-evenly;
 }
 
@@ -171,29 +174,6 @@ section{
   justify-self: center;
 }
 
-.price {
-  display: none;
-}
-
-.price-active {
-  display: block;
-}
-
-.thumbnail:hover {
-  filter: brightness(50%);
-}
-
-.thumbnail:hover + .hidd {
-  display: none;
-}
-
-.polaroid {
-  padding: 0 20px 20px 20px;
-  margin: 10px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 5px 12px 20px;
-}
 
 .nav-active {
   border-bottom: 5px solid var(--main-color);
@@ -205,18 +185,15 @@ section{
   font-size: 1.4em;
 }
 
-.opis {
-  display: flex;
-  font-family: "Permanent Marker", cursive;
-  font-size: 1.8em;
-  justify-content: center;
-}
-
 .lajk {
   position: fixed;
   top: 40px;
   left: 0px;
   z-index: 5;
+}
+#lajek{
+  width:8vw;
+  height:10vh;
 }
 .photo-zone{
   display: flex;
@@ -224,17 +201,7 @@ section{
   flex-flow: row wrap;
   margin-bottom: 20px;
 }
-.photo1{
-  width: 40vw;
-  height: 60vh;
-}
-.photo2{
-  width: 40vw;
-  height: 60vh;
-}
-.hidd {
-  display: none;
-}
+
 .cat-name{
 margin:20px;
 text-align: center;
@@ -251,6 +218,21 @@ footer {
   margin-top: 20px;
 }
 
+.polaroid {
+  display: flex;
+  flex-flow: column wrap;
+  cursor: pointer;
+  padding: 0 5px 20px 5px;
+  margin: 10px auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 5px 12px 20px;
+  height: 55vh;
+  width: 25vw;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+}
 
 
 
@@ -316,5 +298,4 @@ footer {
 }
 #cat-item{
   margin:10px;
-}
 }

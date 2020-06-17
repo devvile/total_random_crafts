@@ -13,10 +13,20 @@
   border-bottom: 5px solid var(--main-color);
 }
 
+.bot {
+  display: flex;
+  flex-direction: column;
+}
+.arrow-container {
+  display: flex;
+  justify-self: flex-start;
+}
+
 .arrow {
   display: flex;
   align-self: center;
   margin-right: 10px;
+  position: absolute;
 }
 
 .lajk {
@@ -38,6 +48,83 @@
   justify-content: center;
 }
 
+.opis {
+  display: flex;
+  font-family: "Sue Ellen Francisco", cursive;
+  font-size: 1.2em;
+  justify-content: center;
+}
+
+.thumbnail {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  margin: auto;
+  position: relative;
+  justify-self: flex-start;
+  opacity: 1;
+}
+.reverse-image {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  justify-self: flex-start;
+  opacity: 0;
+  margin: auto;
+  position: relative;
+}
+
+.reverse-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  align-content: center;
+}
+
+.thumbnail-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  align-content: center;
+}
+
+.product-photo {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  left: 15px;
+}
+
+.polaroid:hover .reverse-image {
+  opacity: 1;
+  filter: brightness(70%);
+  transition: 0.3s ease-in;
+}
+
+.polaroid:hover .thumbnail {
+  opacity: 0;
+}
+
+.polaroid:hover .duch2 {
+  opacity: 1;
+  transition: 0.5s ease 0.3s;
+}
+
+.duch2 {
+  position: absolute;
+  text-align: end;
+  transform: rotate(10deg) translateY(-140px) translateX(90px);
+  font-family: "Sue Ellen Francisco", cursive;
+  font-size: 50px;
+  color: whitesmoke;
+  opacity: 0;
+}
+
 #photo_main {
   width: 80%;
   height: 85vh;
@@ -48,52 +135,84 @@
 .site-bottom {
   position: relative;
   display: flex;
-  flex-flow: row-reverse wrap;
-  justify-items: center;
+  flex-flow: row wrap;
+  justify-self: center;
   align-items: center;
   justify-content: flex-end;
-  padding: 40px;
 }
 
 .polaroid {
   width: 38vw;
-  height: 90vh;
+  height: 75vh;
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
+  justify-items: center;
+  justify-content: space-between;
   position: relative;
-  align-items: center;
-  margin: initial;
-  left: 10px;
+  align-content: center;
 }
 
 .opis {
   margin: 0 10vw 10vh 10vw;
-  font-size: 2em;
+  font-size: 1em;
   text-align: center;
 }
 
-.thumbnail {
-  height: 60vh;
-  width: 36vw;
-  position: relative;
-  justify-self: center;
-  padding: 10px;
-}
-
 .prod_name {
-  margin: 0 10vw 10vh 10vw;
-  font-size: 3em;
+  font-size: 50px;
   text-align: center;
   font-family: "Permanent Marker", cursive;
   text-decoration: none;
   color: black;
-  text-align: center;
 }
 
 .bot {
   display: flex;
   flex-direction: column;
+}
+
+#welcome_igla {
+  width: 90vw;
+}
+
+.desc {
+  width: 90vw;
+}
+.carousel-container {
+  width: 60vw;
+  height: 60vw;
+  margin: auto;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+
+#prevBtn {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  font-size: 30px;
+  opacity: 0.7;
+  z-index: 5;
+  color: darkblue;
+  cursor: pointer;
+}
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  font-size: 30px;
+  opacity: 0.7;
+  z-index: 5;
+  color: darkblue;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {
@@ -104,8 +223,11 @@
     width: 45vw;
     height: 85vh;
   }
+  #welcome_igla {
+    width: 55vw;
+  }
   .prod_name {
-    font-size: 2.5em;
+    font-size: 45px;
     letter-spacing: 5px;
   }
   .thumbnail {
@@ -119,13 +241,15 @@
   .heading {
     font-size: 3.2em;
   }
-
+  #welcome_igla {
+    width: 65vw;
+  }
   .polaroid {
     width: 50vw;
     height: 80vh;
   }
   .prod_name {
-    font-size: 2.3em;
+    font-size: 40px;
   }
   .thumbnail {
     height: 60vh;
@@ -133,11 +257,18 @@
     position: relative;
     justify-self: center;
   }
+  .arrow {
+    height: 20vh;
+    width: 20vw;
+  }
 }
 
 @media screen and (max-width: 724px) {
   .heading {
     font-size: 2.2em;
+  }
+  #welcome_igla {
+    width: 90vw;
   }
 
   .polaroid {
@@ -146,7 +277,7 @@
     margin: auto;
   }
   .prod_name {
-    font-size: 1.8em;
+    font-size: 30px;
   }
   .thumbnail {
     height: 70vh;

@@ -5,12 +5,12 @@
 {% endblock %}
 
 {%block css%}
-
-<style>
-    #shop-nav{
-        border-bottom: 5px solid var(--main-color);
-    }
-</style>
+<link rel="stylesheet" href="{% static './css/shop.css'%}">
+<link
+  href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap"
+  rel="stylesheet"
+/>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 {% endblock%}
 
 {% block top %}
@@ -31,39 +31,48 @@
 {% block content %}
 
 <div class="main-content">
-    
+    <div class="top_sign">
+        <img
+        id="store-pic"
+        src="{% static './img/content/store-pic.png'%}"
+        alt="store-pic"
+      />
+    </div>
     {% for i in list_of_products%}
     <div class="polaroid">
-        <div class="product-foto">
-            <div class="hidd">       
-            </br>
-            <span id = 'opis_produktu'>{{i.short_description}}<br> </span>
+        <div class="product-photo">
+            <div class="thumbnail-container">
+                <img class= 'thumbnail-shop' src='/{{i.thumbnail.url}}'>
             </div>
-
-        <a href ='{%url "detail" i.id%}'>
-        <img class= 'thumbnail' src ='{% static "/img/slonik.png" %}'>
-        </a>
-        </div>
-        <div class="opis">
-            <a class="product_name" href  ='{%url "detail" i.id%}'>{{i.name}}</a><br>
-             <div class="price">
-                {%if i.number == 0%}
-
-                <span id ='sold'> Sold Out</span>
-
-                {% else %}
-                -,{{i.price}} £
-                {%endif%}
+            <div class="reverse-container">
+                <a href ='{%url "detail" i.id%}'>
+                <img class= 'reverse-image' src='/{{i.product_reverse.url}}'}>
+                </a>
             </div>
-        </div>  
+            <div class="duch">
+                    <div class='duch2'>
+                        {%if i.number == 0%}
+
+                    <div id ='sold'> Sold Out</span>
+
+                    {% else %}
+                    -,{{i.price}}£
+                    {%endif%}
+                   </div>
+            </div>
+            <div class="bot">
+                <a class="product_name" href  ='{%url "detail" i.id%}'>{{i.name}}</a><br>
+        
+            </div>  
             
+        </div>
     </div>
+
 
 {% endfor %}
 
 {% endblock %}
 
-</div>
 
 </body>
 </html>

@@ -5,43 +5,96 @@
   href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap"
   rel="stylesheet"
 />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 {%endblock%} {% block content %}
 
 <div class="page-content">
   <div class="heading">
-    <h3 class="welcome">Welcome to Total Random Crafts!</h3>
-  </div>
-  <div class="carousel">
-    <img
-      id="photo_main"
-      src='{% static "/img/content/polaroid_on_string.png" %}'
-    />
-  </div>
-  <div class="desc">
-    <h3 class="opis">{{text1.content}}</h3>
-  </div>
-  <div class="site-bottom">
-    <div class="polaroid">
-        <div class="fot">
-          <a href='{%url "detail" product.id%}'>
-            <img class="thumbnail" src='{% static "/img/slonik.png" %}' />
-          </a>
-        </div>
-        <div class="bot">
-          <div class="name">
-            <a class="prod_name" href='{%url "detail" product.id%}'
-              >{{product.name}}</a
-            >
+    <div class="welcome">
+      <img
+        src="{%static './img/content/welcome_igla.png'%}"
+        alt="welcome_igla"
+        id="welcome_igla"
+      />
+    </div>
+    <div class="carousel-container">
+      <i class="fa fa-angle-double-left" id="prevBtn"></i>
+      <i class="fa fa-angle-double-right" id="nextBtn"></i>
+      <div class="carousel-slide">
+        <img
+          id="lastClone"
+          src="{% static './img/content/zwierzaki/zwierzak5.jpg'%}"
+          alt="carousel-image5"
+        />
+        <img
+          src="{% static './img/content/zwierzaki/zwierzak1.jpg'%}"
+          alt="carousel-image1"
+        />
+        <img
+          src="{% static './img/content/zwierzaki/zwierzak2.jpg'%}"
+          alt="carousel-image2"
+        />
+        <img
+          src="{% static './img/content/zwierzaki/zwierzak3.jpg'%}"
+          alt="carousel-image3"
+        />
+        <img
+          src="{% static './img/content/zwierzaki/zwierzak4.jpg'%}"
+          alt="carousel-image4"
+        />
+        <img
+          src="{% static './img/content/zwierzaki/zwierzak5.jpg'%}"
+          alt="carousel-image5"
+        />
+        <img
+          id="firstClone"
+          src="{% static './img/content/zwierzaki/zwierzak1.jpg'%}"
+          alt="carousel-image1"
+        />
+      </div>
+    </div>
+    <div class="desc">
+      <p class="opis">{{text1.content}}</p>
+      <p></p>
+    </div>
+
+    <div class="site-bottom">
+      <div class="arrow-container">
+        <img
+          class="arrow"
+          src="{% static './img/content/random_arrow.png'%}"
+          alt="random-arrow"
+        />
+      </div>
+      <div class="polaroid">
+        <div class="product-photo">
+          <div class="thumbnail-container">
+            <a href='{%url "detail" product.id%}'>
+              <img class="thumbnail" src="/{{product.thumbnail.url}}" />
+            </a>
+          </div>
+          <div class="reverse-container">
+            <a href='{%url "detail" product.id%}'>
+              <img
+                class="reverse-image"
+                src="/{{product.product_reverse.url}}"
+                }
+              />
+            </a>
           </div>
         </div>
+        <div class="bot">
+          <a class="prod_name" href='{%url "detail" product.id%}'
+            >{{product.name}}</a
+          >
+        </div>
       </div>
-    <div class="arrow">
-      <img
-        src="{% static './img/content/random_arrow.png' %}"  alt="arrow sign"
-        />
     </div>
   </div>
-
-    {% endblock %}}
-  </div>
 </div>
+{% endblock %} {%block js%}
+<script src="{% static './js/app_home.js'%}"></script>
+{%endblock%}

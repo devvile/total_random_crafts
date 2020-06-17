@@ -30,8 +30,8 @@ def cart(request):
 
 @login_required
 def sale(request):
-    categories= Category.objects.all()
-    context = {'categories':categories}
+    sale_items= Product.objects.filter(discount=True)
+    context = {'sale_items':sale_items}
     return render(request,'shop/sale.html',context)
 
 @login_required

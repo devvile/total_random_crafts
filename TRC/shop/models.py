@@ -19,7 +19,8 @@ class Product(models.Model):
     short_description=models.TextField(max_length=250,blank=True,null=True)
     full_description = models.TextField(max_length=500, default = ' no description')
     category = models.ManyToManyField(Category, related_name='what_category')
-    thumbnail = models.ImageField(upload_to='static/img',default = None,null=True)
+    thumbnail = models.ImageField(upload_to='static/img/products',default = None,null=True)
+    product_reverse = models.ImageField(upload_to='static/img/reverses',default = None,null=True)
     timestamp = models.DateTimeField(null=True)
 
     def __str__(self):

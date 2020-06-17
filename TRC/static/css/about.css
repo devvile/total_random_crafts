@@ -42,6 +42,10 @@
   width: 100vw;
 }
 
+#contact-image {
+  width: 100vw;
+}
+
 .top-sign {
   display: flex;
   justify-items: center;
@@ -55,6 +59,26 @@
   align-self: center;
 }
 
+#shipping_photo {
+  margin: auto;
+  align-self: center;
+  width: 90vw;
+  height: 16vh;
+}
+
+#contact_photo {
+  margin: auto;
+  align-self: center;
+  width: 90vw;
+  height: 20vh;
+}
+
+#delivery-man {
+  width: 100vw;
+  position: relative;
+  margin: 10px 0 20px 0;
+}
+
 .contact-data {
   position: absolute;
   background-color: white;
@@ -64,21 +88,37 @@
   padding: 20px;
 }
 
-.page-content {
+.contact-column {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "list ."
+    ". buzia"
+    "skrzynka .";
+}
+.skrzynka {
+  grid-area: skrzynka;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.buzia {
+  grid-area: buzia;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.list {
+  grid-area: list;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-#delivery-man {
-  width: 100vw;
-  position: relative;
-  margin: 10px 0 20px 0;
-}
-
-.text-field {
-  z-index: 2;
-  align-self: flex-end;
-  height: 100%;
-  font-size: 1rem;
-  width: 90vw;
-  margin: auto;
+#list-img-dir,
+#skrzynka-img-dir,
+#buzia-img-dir {
+  width: 30vw;
 }
